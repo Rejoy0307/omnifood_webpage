@@ -23,7 +23,7 @@ Default : 1
 ++++++++++++++ 02 Colors +++++++++++++++
 -Primary : #e67e22
 
--Tints : #fdf2e9 #fae5d3
+-Tints : #fdf2e9 #fae5d3 #eb984e
 
 -Shades : #cf711f
 
@@ -32,11 +32,17 @@ Default : 1
 -Grey: #555 #333
 
 +++++++++++++++ 03 WhiteSpace +++++++++++++++
+
 -SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 +++++++++++++++ 04 BORDER RADIUS ++++++++++++++++++
+
 default : 9px
+
++++++++++++++++++ 05 SHADOW ++++++++++++++++++++++++++++
+
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 */
 
@@ -131,6 +137,19 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -140,6 +159,11 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   transition: all 300ms;
+
+  /* only for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -217,4 +241,9 @@ strong {
 
 .text-center {
   text-align: center;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 35, 0.5);
 }
